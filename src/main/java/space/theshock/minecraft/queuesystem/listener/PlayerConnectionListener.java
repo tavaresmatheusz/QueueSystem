@@ -10,7 +10,7 @@ import space.theshock.minecraft.queuesystem.player.QueuePlayer;
 import space.theshock.minecraft.queuesystem.queue.Queue;
 
 public class PlayerConnectionListener implements Listener {
-
+	//
 	@EventHandler
 	public void onLogin(LoginEvent event) {
 		UUID uuid = event.getConnection().getUniqueId();
