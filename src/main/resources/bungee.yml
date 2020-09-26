@@ -1,0 +1,4 @@
+name: QueueSystem
+author: Shokiin
+main: space.theshock.minecraft.queuesystem.BungeeMain
+version: 1.0
