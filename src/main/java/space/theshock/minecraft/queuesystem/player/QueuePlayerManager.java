@@ -17,5 +17,10 @@ public class QueuePlayerManager {
 			queuePlayerMap.put(uuid, new QueuePlayer(uuid));
 		return queuePlayerMap.get(uuid);
 	}
+	
+	public void removeQueuePlayer(UUID uuid) {
+		if (queuePlayerMap.containsKey(uuid))
+			queuePlayerMap.remove(uuid);
+	}
 
 }

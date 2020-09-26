@@ -19,7 +19,7 @@ public class PlayerConnectionListener implements Listener {
 
 		
 		if (queuePlayer.isEnabledToLogin()) {
-			queuePlayer.setEnabledToLogin(false);
+			BungeeMain.getInstance().getQueuePlayerManager().removeQueuePlayer(uuid);
 			queue.removeFromQueue(uuid);
 			return;
 		}
