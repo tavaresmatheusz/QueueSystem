@@ -10,9 +10,8 @@ import space.theshock.minecraft.queuesystem.player.QueuePlayerManager;
 import space.theshock.minecraft.queuesystem.queue.Queue;
 
 public class BungeeMain extends Plugin {
-// 
+
 	@Getter
-	@Setter
 	private static BungeeMain instance;
 	@Getter
 	private QueuePlayerManager queuePlayerManager;
@@ -21,7 +20,7 @@ public class BungeeMain extends Plugin {
 
 	@Override
 	public void onLoad() {
-		setInstance(this);
+		instance = this;
 	}
 
 	@Override

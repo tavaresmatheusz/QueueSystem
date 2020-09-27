@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import space.theshock.minecraft.queuesystem.BungeeMain;
+
 public class Queue {
 
 	private List<UUID> queue;
@@ -18,14 +20,15 @@ public class Queue {
 	}
 
 	public void removeFromQueue(UUID uuid) {
-		System.out.println("removido da fila");
 		if (queue.contains(uuid))
 			queue.remove(uuid);
 	}
 
 	public void removeFromQueue(int i) {
-		if (queue.size() > i)
+		if (queue.size() > i) {
+			BungeeMain.getInstance().getQueuePlayerManager().removeQueuePlayer(queue.get(i));
 			queue.remove(i);
+		}
 	}
 
 	public boolean inQueue(UUID uuid) {
